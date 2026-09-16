@@ -1,0 +1,20 @@
+[
+  {"titulo": "Minecraft", "genero": "Sandbox", "desarrollador": "Mojang", "clasificacion_esrb": "E10+"},
+  {"titulo": "Animal Crossing: New Horizons", "genero": "Simulacion", "desarrollador": "Nintendo", "clasificacion_esrb": "E"},
+  {"titulo": "Mario Kart 8", "genero": "Carreras", "desarrollador": "Nintendo", "clasificacion_esrb": "E"},
+  {"titulo": "Stardew Valley", "genero": "Simulacion", "desarrollador": "ConcernedApe", "clasificacion_esrb": "E10+"},
+  {"titulo": "LEGO Star Wars", "genero": "Aventura", "desarrollador": "TT Games", "clasificacion_esrb": "E10+"},
+  {"titulo": "Fortnite", "genero": "Battle Royale", "desarrollador": "Epic Games", "clasificacion_esrb": "T"},
+  {"titulo": "Overwatch 2", "genero": "Shooter", "desarrollador": "Blizzard", "clasificacion_esrb": "T"},
+  {"titulo": "Pokemon Escarlata", "genero": "RPG", "desarrollador": "Game Freak", "clasificacion_esrb": "E"},
+  {"titulo": "Rocket League", "genero": "Deportes", "desarrollador": "Psyonix", "clasificacion_esrb": "E"},
+  {"titulo": "Terraria", "genero": "Sandbox", "desarrollador": "Re-Logic", "clasificacion_esrb": "T"},
+  {"titulo": "God of War Ragnarok", "genero": "Accion/Aventura", "desarrollador": "Santa Monica Studio", "clasificacion_esrb": "M"},
+  {"titulo": "Call of Duty: Modern Warfare", "genero": "Shooter", "desarrollador": "Infinity Ward", "clasificacion_esrb": "M"},
+  {"titulo": "The Last of Us Part I", "genero": "Accion/Aventura", "desarrollador": "Naughty Dog", "clasificacion_esrb": "M"},
+  {"titulo": "Grand Theft Auto V", "genero": "Accion/Aventura", "desarrollador": "Rockstar Games", "clasificacion_esrb": "M"},
+  {"titulo": "Resident Evil 4", "genero": "Survival Horror", "desarrollador": "Capcom", "clasificacion_esrb": "M"},
+  {"titulo": "Hollow Knight", "genero": "Metroidvania", "desarrollador": "Team Cherry", "clasificacion_esrb": "E10+"},
+  {"titulo": "It Takes Two", "genero": "Aventura Cooperativa", "desarrollador": "Hazelight Studios", "clasificacion_esrb": "T"},
+  {"titulo": "Celeste", "genero": "Plataformas", "desarrollador": "Maddy Makes Games", "clasificacion_esrb": "E10+"}
+]
