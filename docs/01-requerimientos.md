@@ -12,7 +12,7 @@
 
 ## Requerimientos no funcionales
 
-1 — La búsqueda por título debe resolverse en tiempo logarítmico sobre el total de elementos (O(log n)).
+1 — La búsqueda por título debe resolverse en tiempo logarítmico sobre el total de elementos (O(log n)). (implementado en TP3 mediante árbol binario de búsqueda)
 2 — El sistema debe soportar al menos 10.000 elementos sin degradar perceptiblemente el tiempo de respuesta.
 3 — La interfaz debe ser accesible por línea de comandos, sin requerir conocimientos técnicos del usuario final.
 4 — Los datos del catálogo deben poder cargarse desde un archivo JSON externo, sin necesidad de modificar el código fuente.
@@ -29,3 +29,10 @@
 - No se implementa autenticación de usuarios (el nombre de usuario se usa solo para identificar votos, sin contraseña ni sesión).
 - No se implementa una interfaz gráfica ni web (solo terminal).
 - No se conecta con APIs externas de videojuegos en tiempo real (los datos son estáticos, cargados desde JSON).
+
+## Historial de avance
+
+- **TP0**: definición de idea, dominio, problema, usuario objetivo (ver propuesta enviada al docente).
+- **TP1**: clase `Videojuego`, carga desde JSON, interfaz de terminal con buscar/listar/filtrar.
+- **TP2**: comparación de búsqueda secuencial (O(n)) vs binaria (O(log n)), medición con 100/1.000/10.000 elementos.
+- **TP3**: árbol binario de búsqueda (`ArbolBST`) ordenado por título, con inserción, búsqueda y recorridos inorder/preorder/postorder. Integrado a las opciones "Buscar" y "Listar" del menú, reemplazando la lista simple.
