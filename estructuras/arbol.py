@@ -76,3 +76,12 @@ class ArbolBST:
             self._postorder_recursivo(nodo.izquierda, resultado)
             self._postorder_recursivo(nodo.derecha, resultado)
             resultado.append(nodo.videojuego)
+   #TP 4:
+    def altura(self):
+        return self._altura_recursiva(self.raiz)
+
+    def _altura_recursiva(self, nodo):
+        if nodo is None:
+            return 0
+        return 1 + max(self._altura_recursiva(nodo.izquierda),
+                       self._altura_recursiva(nodo.derecha))

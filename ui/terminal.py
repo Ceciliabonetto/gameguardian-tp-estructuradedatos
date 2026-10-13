@@ -1,6 +1,7 @@
 import json
 from modelos.videojuego import Videojuego
-from estructuras.arbol import ArbolBST
+from estructuras.avl import ArbolAVL #Tp 4
+#from estructuras.arbol import ArbolBST
 
 def cargar_videojuegos():
     with open("datos/videojuegos.json", "r", encoding="utf-8") as archivo:
@@ -8,7 +9,7 @@ def cargar_videojuegos():
     return [Videojuego.desde_dict(d) for d in datos]
 
 def construir_arbol(catalogo):
-    arbol = ArbolBST()
+    arbol = ArbolAVL() #Tp 4
     for juego in catalogo:
         arbol.insertar(juego)
     return arbol
@@ -22,7 +23,7 @@ def iniciar():
 
     while True:
         print("\n=== GAMEGUARDIAN ===")
-        print("1. Buscar videojuego (Arbol de busqueda binario)")
+        print("1. Buscar videojuego (Arbol AVL)") #Tp4
         print("2. Listar todos los videojuegos (Inorder)")
         print("3. Filtrar por clasificacion ESRB")
         print("0. Salir")
