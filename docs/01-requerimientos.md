@@ -12,7 +12,7 @@
 
 ## Requerimientos no funcionales
 
-1 — La búsqueda por título debe resolverse en tiempo logarítmico sobre el total de elementos (O(log n)). (implementado en TP3 mediante árbol binario de búsqueda)
+1 — La búsqueda por título debe resolverse en tiempo logarítmico sobre el total de elementos (O(log n)). (implementado en TP3 mediante árbol binario de búsqueda). La búsqueda por título debe resolverse en tiempo logarítmico sobre el total de elementos (O(log n)). (TP3: árbol binario de búsqueda; TP4: AVL, que garantiza O(log n) sin importar el orden de inserción)
 2 — El sistema debe soportar al menos 10.000 elementos sin degradar perceptiblemente el tiempo de respuesta.
 3 — La interfaz debe ser accesible por línea de comandos, sin requerir conocimientos técnicos del usuario final.
 4 — Los datos del catálogo deben poder cargarse desde un archivo JSON externo, sin necesidad de modificar el código fuente.
@@ -36,3 +36,4 @@
 - **TP1**: clase `Videojuego`, carga desde JSON, interfaz de terminal con buscar/listar/filtrar.
 - **TP2**: comparación de búsqueda secuencial (O(n)) vs binaria (O(log n)), medición con 100/1.000/10.000 elementos.
 - **TP3**: árbol binario de búsqueda (`ArbolBST`) ordenado por título, con inserción, búsqueda y recorridos inorder/preorder/postorder. Integrado a las opciones "Buscar" y "Listar" del menú, reemplazando la lista simple.
+- **TP4**: árbol AVL (`ArbolAVL`) con las cuatro rotaciones, integrado al menú en lugar del BST. Experimento con datos ordenados: el BST degenera (altura = N) y el AVL mantiene altura ≈ log₂ N (ver `docs/06-analisis-avl.md`).
