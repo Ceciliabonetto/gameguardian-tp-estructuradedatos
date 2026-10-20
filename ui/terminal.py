@@ -1,6 +1,7 @@
 import json
 from modelos.videojuego import Videojuego
 from estructuras.avl import ArbolAVL #Tp 4
+from estructuras.arbol_general import ArbolGeneral #Tp5
 #from estructuras.arbol import ArbolBST
 
 def cargar_videojuegos():
@@ -14,18 +15,26 @@ def construir_arbol(catalogo):
         arbol.insertar(juego)
     return arbol
 
+def construir_jerarquia(catalogo): #Tp5 (funcion nueva)
+    jerarquia = ArbolGeneral("Videojuegos")
+    for juego in catalogo:
+        jerarquia.insertar_juego(juego)
+    return jerarquia
+
 def filtrar_por_edad(catalogo, clasificacion):
     return [j for j in catalogo if j.get_clasificacion_esrb() == clasificacion]
 
 def iniciar():
     catalogo = cargar_videojuegos()
     arbol = construir_arbol(catalogo)
+    jerarquia = construir_jerarquia(catalogo) #Tp5
 
     while True:
         print("\n=== GAMEGUARDIAN ===")
         print("1. Buscar videojuego (Arbol AVL)") #Tp4
         print("2. Listar todos los videojuegos (Inorder)")
         print("3. Filtrar por clasificacion ESRB")
+        print("4. Explorar categorias (Arbol general)") #Tp5
         print("0. Salir")
         opcion = input("Elija una opcion: ")
 
@@ -40,5 +49,14 @@ def iniciar():
             clasificacion = input("Ingrese clasificacion (E, E10+, T, M): ")
             for j in filtrar_por_edad(catalogo, clasificacion):
                 print(j)
+        elif opcion == "4": #Tp5 (bloque nuevo)
+            jerarquia.mostrar_categorias() #cambiad de jerarquias.mostrar
+            nombre = input("\nIngrese una categoria para ver sus juegos (ej: E10+, Simulacion): ")
+            nodo = jerarquia.buscar_categoria(nombre)
+            if nodo is None:
+                print("No se encontro esa categoria")
+            else:
+                for juego in jerarquia.juegos_de(nodo):
+                    print(juego)
         elif opcion == "0":
             break

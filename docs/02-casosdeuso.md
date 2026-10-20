@@ -2,14 +2,18 @@
 
 **Actor:** Usuario (padre/tutor que busca juegos aptos para su hijo).
 
-| Caso de uso | Estado |
-|---|---|
-| Buscar videojuego | Implementado (TP1, AVL desde TP4) |
-| Listar catálogo | Implementado (TP1) |
-| Filtrar por clasificación ESRB | Implementado (TP1) |
-| Ver Top 10 por franja etaria | Pendiente (TP6) |
-| Recomendar juegos similares | Pendiente (TP7-TP9) |
-| Votar clasificación | Pendiente |
+## Lista de casos de uso
+
+Implementados:
+- Buscar videojuego (desde TP1, con AVL desde TP4)
+- Listar catálogo (TP1)
+- Filtrar por clasificación ESRB (TP1)
+- Explorar categorías (TP5)
+
+Pendientes:
+- Ver Top 10 por franja etaria (TP6)
+- Recomendar juegos similares (TP7 a TP9)
+- Votar clasificación
 
 # 01-Buscar videojuego
 - **Precondición:** el catálogo está cargado.
