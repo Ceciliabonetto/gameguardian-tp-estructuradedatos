@@ -1,9 +1,10 @@
 class Videojuego:
-    def __init__(self, titulo, genero, desarrollador, clasificacion_esrb):
+    def __init__(self, titulo, genero, desarrollador, clasificacion_esrb, rating=0.0):
         self._titulo = titulo
         self._genero = genero
         self._desarrollador = desarrollador
         self._clasificacion_esrb = clasificacion_esrb
+        self._rating = rating #Tp6
 
     def get_titulo(self):
         return self._titulo
@@ -14,9 +15,13 @@ class Videojuego:
     def get_clasificacion_esrb(self):
         return self._clasificacion_esrb
 
+    def get_rating(self): #TP6
+        return self._rating
+
     @classmethod
     def desde_dict(cls, datos):
-        return cls(datos["titulo"], datos["genero"], datos["desarrollador"], datos["clasificacion_esrb"])
+        return cls(datos["titulo"], datos["genero"], datos["desarrollador"],
+                   datos["clasificacion_esrb"], datos.get("rating", 0.0))
 
     def __str__(self):
-        return f"{self._titulo} - ESRB {self._clasificacion_esrb} - {self._genero}"
+        return f"{self._titulo} - ESRB {self._clasificacion_esrb} - {self._genero} - Rating {self._rating}" #Modificacion para tp6

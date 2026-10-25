@@ -9,9 +9,9 @@ Implementados:
 - Listar catálogo (TP1)
 - Filtrar por clasificación ESRB (TP1)
 - Explorar categorías (TP5)
+- Ver Top 10 por franja etaria (TP6)
 
 Pendientes:
-- Ver Top 10 por franja etaria (TP6)
 - Recomendar juegos similares (TP7 a TP9)
 - Votar clasificación
 
@@ -28,7 +28,7 @@ Pendientes:
 - **Flujo principal:** 1. El usuario elige "Filtrar". 2. Ingresa la clasificación (E, E10+, T, M). 3. El sistema muestra los juegos con esa clasificación.
 - **Flujo alternativo:** si ninguno coincide, no se muestra nada.
 
-# 04-Ver Top 10 por franja etaria (pendiente)
+# 04-Ver Top 10 por franja etaria 
 - **Flujo principal:** el usuario elige una clasificación y el sistema muestra los 10 juegos mejor valorados de esa franja.
 
 # 05-Recomendar juegos similares (pendiente)

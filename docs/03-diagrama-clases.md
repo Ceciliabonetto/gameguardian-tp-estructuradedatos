@@ -2,14 +2,16 @@
 
 ```mermaid
 classDiagram
-    class Videojuego {
+        class Videojuego {
         -titulo
         -genero
         -desarrollador
         -clasificacion_esrb
+        -rating
         +get_titulo()
         +get_genero()
         +get_clasificacion_esrb()
+        +get_rating()
         +desde_dict(datos)
     }
     class ArbolBST {
@@ -26,12 +28,28 @@ classDiagram
         +inorder()
         +altura()
     }
+    class ArbolGeneral {
+        +insertar_juego(videojuego)
+        +buscar_categoria(nombre)
+        +juegos_de(nodo)
+        +mostrar_categorias()
+    }
+
+    class HeapMaximo {
+        +insertar(elemento)
+        +extraer_maximo()
+        +ver_maximo()
+        +construir(elementos)
+    }
     ArbolBST --> Videojuego : almacena
     ArbolAVL --> Videojuego : almacena
+    ArbolGeneral --> Videojuego : hojas
+    HeapMaximo --> Videojuego : ordena por rating
 ```
 
-**Implementado:** `Videojuego`, `ArbolBST` (TP3), `ArbolAVL` (TP4).
-**Pendiente:** `Usuario`, `Voto`, `Heap` (TP6), `Grafo` (TP7) y `Recomendador`.
+**Implementado:** `Videojuego`, `ArbolBST` (TP3), `ArbolAVL` (TP4), `ArbolGeneral` (TP5), `HeapMaximo` (TP6).
+**Pendiente:** `Usuario`, `Voto`, `Grafo` (TP7) y `Recomendador`.
 
-El menú (`ui/terminal.py`) usa `ArbolAVL`. `ArbolBST` se conserva como punto de
+El menú (`ui/terminal.py`) usa `ArbolAVL` (buscar y listar), `ArbolGeneral`
+(categorías) y `HeapMaximo` (Top 10). `ArbolBST` se conserva como punto de
 comparación en el experimento de TP4.

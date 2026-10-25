@@ -2,6 +2,7 @@ import json
 from modelos.videojuego import Videojuego
 from estructuras.avl import ArbolAVL #Tp 4
 from estructuras.arbol_general import ArbolGeneral #Tp5
+from algoritmos.ranking import top_n #Tp6
 #from estructuras.arbol import ArbolBST
 
 def cargar_videojuegos():
@@ -35,6 +36,7 @@ def iniciar():
         print("2. Listar todos los videojuegos (Inorder)")
         print("3. Filtrar por clasificacion ESRB")
         print("4. Explorar categorias (Arbol general)") #Tp5
+        print("5. Top 10 por clasificacion (Heap)") #Tp6
         print("0. Salir")
         opcion = input("Elija una opcion: ")
 
@@ -49,7 +51,7 @@ def iniciar():
             clasificacion = input("Ingrese clasificacion (E, E10+, T, M): ")
             for j in filtrar_por_edad(catalogo, clasificacion):
                 print(j)
-        elif opcion == "4": #Tp5 (bloque nuevo)
+        elif opcion == "4": #Tp5 
             jerarquia.mostrar_categorias() #cambiad de jerarquias.mostrar
             nombre = input("\nIngrese una categoria para ver sus juegos (ej: E10+, Simulacion): ")
             nodo = jerarquia.buscar_categoria(nombre)
@@ -58,5 +60,10 @@ def iniciar():
             else:
                 for juego in jerarquia.juegos_de(nodo):
                     print(juego)
+        elif opcion == "5": #Tp6 
+            clasificacion = input("Ingrese clasificacion (E, E10+, T, M): ")
+            juegos = filtrar_por_edad(catalogo, clasificacion)
+            for puesto, juego in enumerate(top_n(juegos, 10), start=1):
+                print(f"{puesto}. {juego}")
         elif opcion == "0":
             break
