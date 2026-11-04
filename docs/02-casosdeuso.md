@@ -10,9 +10,10 @@ Implementados:
 - Filtrar por clasificación ESRB (TP1)
 - Explorar categorías (TP5)
 - Ver Top 10 por franja etaria (TP6)
+- Ver juegos conectados (TP7)
 
 Pendientes:
-- Recomendar juegos similares (TP7 a TP9)
+- Recomendar juegos similares (TP8 y TP9)
 - Votar clasificación
 
 # 01-Buscar videojuego
@@ -25,15 +26,27 @@ Pendientes:
 - **Flujo principal:** 1. El usuario elige "Listar". 2. El sistema recorre el árbol en inorder y muestra todos los juegos ordenados alfabéticamente.
 
 # 03-Filtrar por clasificación ESRB
+- **Precondición:** el catálogo está cargado.
 - **Flujo principal:** 1. El usuario elige "Filtrar". 2. Ingresa la clasificación (E, E10+, T, M). 3. El sistema muestra los juegos con esa clasificación.
 - **Flujo alternativo:** si ninguno coincide, no se muestra nada.
 
-# 04-Ver Top 10 por franja etaria 
-- **Flujo principal:** el usuario elige una clasificación y el sistema muestra los 10 juegos mejor valorados de esa franja.
+# 04-Explorar categorías
+- **Precondición:** el catálogo está cargado.
+- **Flujo principal:** 1. El usuario elige "Explorar categorías". 2. El sistema muestra las categorías (clasificación y género). 3. El usuario escribe una (por ejemplo, T). 4. El sistema lista los juegos de esa categoría.
+- **Flujo alternativo:** si la categoría no existe, el sistema informa "No se encontró esa categoría".
 
-# 05-Recomendar juegos similares (pendiente)
+# 05-Ver Top 10 por franja etaria
+- **Precondición:** el catálogo está cargado.
+- **Flujo principal:** 1. El usuario elige "Top 10". 2. Ingresa la clasificación. 3. El sistema arma un heap con los juegos de esa franja y muestra los 10 mejor valorados, de mayor a menor rating.
+
+# 06-Ver juegos conectados
+- **Precondición:** el catálogo está cargado.
+- **Flujo principal:** 1. El usuario elige "Ver juegos conectados". 2. Ingresa el título de un juego. 3. El sistema muestra los juegos que comparten género o desarrollador con él.
+- **Flujo alternativo:** si el juego no existe, el sistema informa "No se encontró ese juego".
+
+# 07-Recomendar juegos similares (pendiente)
 - **Flujo principal:** el usuario ingresa un juego que le gustó y el sistema sugiere juegos similares aptos para la misma franja etaria.
 
-# 06-Votar clasificación (pendiente)
+# 08-Votar clasificación (pendiente)
 - **Flujo principal:** el usuario se identifica con un nickname y vota si la clasificación ESRB le parece acertada, más alta o más baja.
 - **Flujo alternativo:** si ya votó ese juego, el sistema lo informa y no registra el voto.

@@ -12,6 +12,9 @@ class Videojuego:
     def get_genero(self):
         return self._genero
 
+    def get_desarrollador(self): #Tp7
+        return self._desarrollador
+
     def get_clasificacion_esrb(self):
         return self._clasificacion_esrb
 

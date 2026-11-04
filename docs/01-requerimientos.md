@@ -10,6 +10,7 @@
 6 — El sistema debe permitir que un usuario vote si la clasificación ESRB de un juego le parece acertada, generando una clasificación complementaria basada en la comunidad.
 7 — El sistema no debe permitir que un mismo usuario vote más de una vez por el mismo juego.
 8 — El sistema debe permitir explorar el catálogo por categorías jerárquicas (clasificación ESRB → género → videojuego).
+9 — El sistema debe permitir ver qué videojuegos están conectados a uno dado (mismo género o mismo desarrollador).
 
 ## Requerimientos no funcionales
 
@@ -40,3 +41,4 @@
 - **TP4**: árbol AVL (`ArbolAVL`) con las cuatro rotaciones, integrado al menú en lugar del BST. Experimento con datos ordenados: el BST degenera (altura = N) y el AVL mantiene altura ≈ log₂ N (ver `docs/06-analisis-avl.md`).
 - **TP5**: árbol general (`ArbolGeneral`) con la jerarquía clasificación ESRB → género → videojuego. Integrado al menú como "Explorar categorías", que muestra primero las categorías y lista los juegos de la elegida.
 - **TP6**: heap maximal (`HeapMaximo`) hecho a mano, con el rating como prioridad. Integrado al menú como "Top 10 por clasificación".
+- **TP7**: grafo no dirigido y sin pesos (`Grafo`) con lista de adyacencia. Los videojuegos son vértices y se conectan si comparten género o desarrollador. Integrado al menú como "Ver juegos conectados a uno".
