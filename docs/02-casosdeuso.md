@@ -2,6 +2,38 @@
 
 **Actor:** Usuario (padre/tutor que busca juegos aptos para su hijo).
 
+## Diagrama de casos de uso
+
+```mermaid
+flowchart LR
+    U([Usuario: padre o tutor])
+
+    subgraph GG[GameGuardian]
+        CU1([01 Buscar videojuego])
+        CU2([02 Listar catálogo])
+        CU3([03 Filtrar por clasificación ESRB])
+        CU4([04 Explorar categorías])
+        CU5([05 Ver Top 10 por franja etaria])
+        CU6([06 Ver juegos conectados])
+        CU7([07 Ver relacionados - BFS])
+        CU8([08 Explorar red de relacionados - DFS])
+        CU9([09 Votar clasificación])
+    end
+
+    U --- CU1
+    U --- CU2
+    U --- CU3
+    U --- CU4
+    U --- CU5
+    U --- CU6
+    U --- CU7
+    U --- CU8
+    U --- CU9
+```
+El único actor es el usuario (un padre o tutor que busca juegos aptos para su
+hijo). Cada óvalo es una opción del menú y su número coincide con el caso
+descripto más abajo.
+
 ## Lista de casos de uso
 
 Implementados:
