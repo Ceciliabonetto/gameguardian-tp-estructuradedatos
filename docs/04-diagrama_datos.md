@@ -7,24 +7,30 @@ flowchart TD
     B --> H[ArbolGeneral por categorías - implementado]
     B --> D[HeapMaximo por rating - implementado]
     B --> E[Grafo de similitud - implementado]
-    E --> F[BFS / DFS / camino mínimo - pendiente TP8-TP9]
+    B --> I[RegistroVotos - implementado]
+    J[datos/votos.json] <--> I
+    E --> F[BFS y DFS con filtro por edad - implementado]
     C --> G[Interfaz de terminal]
     H --> G
     D --> G
     E --> G
     F --> G
+    I --> G
 ```
 
 **Estado actual:** el JSON se carga como lista de `Videojuego`, y esa lista
-alimenta cuatro estructuras:
+alimenta cinco estructuras:
 
-- **ArbolAVL**, ordenado por título: atiende las opciones de buscar y listar.
+- **ArbolAVL**, ordenado por título: atiende buscar y listar.
 - **ArbolGeneral**, con la jerarquía clasificación → género → videojuego:
   atiende "Explorar categorías".
 - **HeapMaximo**, ordenado por rating: atiende el Top 10 por clasificación.
-  Se arma en cada consulta con los juegos de la clasificación elegida.
 - **Grafo** de similitud (no dirigido, sin pesos, lista de adyacencia): atiende
-  "Ver juegos conectados a uno". Va a alimentar BFS, DFS y el camino mínimo.
+  "Ver juegos conectados" y alimenta los recorridos **BFS** (cola) y **DFS**
+  (pila), que muestran los juegos relacionados sin salirse de la franja de edad.
+- **RegistroVotos**: guarda un voto por usuario y por juego, y los lee y escribe
+  en `datos/votos.json` para que no se pierdan al cerrar el programa. Atiende
+  "Votar la clasificación".
 
 El filtro por clasificación recorre la lista directamente.
-Este documento se completa a medida que se suman las etapas siguientes.
+El camino mínimo (TP9) queda fuera de alcance.

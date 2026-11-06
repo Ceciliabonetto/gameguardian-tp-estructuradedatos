@@ -11,10 +11,9 @@ Implementados:
 - Explorar categorías (TP5)
 - Ver Top 10 por franja etaria (TP6)
 - Ver juegos conectados (TP7)
+- Ver relacionados, del más cercano al más lejano (TP8, BFS)
+- Explorar la red de relacionados (TP8, DFS)
 
-Pendientes:
-- Recomendar juegos similares (TP8 y TP9)
-- Votar clasificación
 
 # 01-Buscar videojuego
 - **Precondición:** el catálogo está cargado.
@@ -44,9 +43,16 @@ Pendientes:
 - **Flujo principal:** 1. El usuario elige "Ver juegos conectados". 2. Ingresa el título de un juego. 3. El sistema muestra los juegos que comparten género o desarrollador con él.
 - **Flujo alternativo:** si el juego no existe, el sistema informa "No se encontró ese juego".
 
-# 07-Recomendar juegos similares (pendiente)
-- **Flujo principal:** el usuario ingresa un juego que le gustó y el sistema sugiere juegos similares aptos para la misma franja etaria.
+# 07-Ver relacionados (BFS)
+- **Precondición:** el catálogo está cargado.
+- **Flujo principal:** 1. El usuario elige "Relacionados". 2. Ingresa el título de un juego. 3. El sistema recorre el grafo con BFS y muestra los juegos relacionados, del más cercano al más lejano, sin incluir juegos más restrictivos en edad.
+- **Flujo alternativo:** si el juego no existe, informa "No se encontró ese juego". Si no hay relacionados aptos, informa "No hay juegos relacionados aptos para esa edad".
 
-# 08-Votar clasificación (pendiente)
+# 08-Explorar red de relacionados (DFS)
+- **Precondición:** el catálogo está cargado.
+- **Flujo principal:** 1. El usuario elige "Explorar red". 2. Ingresa el título de un juego. 3. El sistema recorre el grafo en profundidad y muestra toda la cadena de juegos relacionados, con el mismo filtro de edad.
+- **Flujo alternativo:** igual que el caso 07.
+
+# 09-Votar clasificación (pendiente)
 - **Flujo principal:** el usuario se identifica con un nickname y vota si la clasificación ESRB le parece acertada, más alta o más baja.
 - **Flujo alternativo:** si ya votó ese juego, el sistema lo informa y no registra el voto.
