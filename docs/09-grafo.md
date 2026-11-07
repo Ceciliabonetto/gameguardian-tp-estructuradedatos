@@ -26,17 +26,18 @@ No dirigido y sin pesos.
 
 ## Representación
 
-Lista de adyacencia: cada videojuego guarda la lista de los juegos con los
-que está conectado.
+Lista de adyacencia: cada videojuego guarda la lista de los juegos con los que
+está conectado.
 
-Un grafo es denso cuando tiene más aristas que vértices. El nuestro tiene 18
-vértices y solo 7 aristas, así que no es denso. Con una matriz de adyacencia
-tendríamos 18 x 18 = 324 casilleros y casi todos serían ceros. Con la lista
-solo guardamos las 7 conexiones que existen.
+El grafo tiene 42 vértices y 69 aristas. Según la definición vista en clase
+(más aristas que vértices) ya es denso, pero la mayoría de los pares posibles
+no están conectados: hay 861 pares y solo 69 aristas (8%). Con una matriz de
+adyacencia tendríamos 42 x 42 = 1.764 casilleros y solo 138 ocupados. Con la
+lista guardamos únicamente las conexiones que existen.
 
 ## Limitación
 
-8 de los 18 juegos no tienen ninguna conexión (por ejemplo Fortnite o Celeste),
-porque son los únicos de su género y desarrollador. Una mejora posible es
-agregar etiquetas de mecánicas (crafteo, mundo abierto, cooperativo) y conectar
-los juegos que compartan alguna.
+6 de los 42 juegos no tienen ninguna conexión (Resident Evil 4, Hollow Knight,
+It Takes Two, Among Us, Portal 2 y Hades), porque son los únicos de su género y
+de su desarrollador. Una mejora posible es agregar etiquetas de mecánicas y
+conectar los juegos que compartan alguna.

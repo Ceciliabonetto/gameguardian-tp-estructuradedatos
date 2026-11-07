@@ -27,7 +27,7 @@ apto para el chico, que es el objetivo de GameGuardian.
 ## Complejidad
 
 Los dos son O(V + E): cada vértice se visita una vez y cada arista se mira una
-vez. Con nuestro grafo son 18 vértices y 7 aristas.
+vez. Con nuestro grafo son 42 vértices y 69 aristas.
 
 ## Diferencias
 

@@ -1,4 +1,4 @@
-# Casos de uso - GameGuardian
+a# Casos de uso - GameGuardian
 
 **Actor:** Usuario (padre/tutor que busca juegos aptos para su hijo).
 
