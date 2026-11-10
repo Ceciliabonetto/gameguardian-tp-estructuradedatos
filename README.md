@@ -15,7 +15,6 @@ buscar, explorar, rankear, relacionar y votar juegos.
 
 - Cecilia Bonetto (@Ceciliabonetto)
 - Leonel Rodriguez (@LeoDevSQL)
-- Juan Manuel Aramayo (caido en combate)
 
 ## Cómo ejecutarlo
 
