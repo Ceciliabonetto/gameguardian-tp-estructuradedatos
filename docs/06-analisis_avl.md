@@ -1,6 +1,6 @@
 # TP2 y TP4 - Análisis de búsqueda y balance del árbol
 
-## Antecedente (TP2): búsqueda secuencial contra binaria
+## Antecedente (TP2): búsqueda secuencial contra binaria (presentación)
 
 Operación elegida: búsqueda de un videojuego por título.
 
