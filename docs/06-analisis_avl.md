@@ -1,12 +1,33 @@
-# TP4 - Balance del árbol: BST vs AVL
+# TP2 y TP4 - Análisis de búsqueda y balance del árbol
 
-# Problema
+## Antecedente (TP2): búsqueda secuencial contra binaria
+
+Operación elegida: búsqueda de un videojuego por título.
+
+| N (juegos) | Secuencial (ms) | Binaria (ms) |
+|---|---|---|
+| 100 | 0,0300 | 0,0121 |
+| 1.000 | 0,1224 | 0,0067 |
+| 10.000 | 1,2544 | 0,0096 |
+
+- Secuencial: O(n). En el peor caso recorre todos los elementos.
+- Binaria: O(log n). Descarta la mitad en cada paso, pero necesita los datos
+  ordenados.
+
+Con 10.000 elementos la binaria necesita unas 14 comparaciones y la secuencial
+hasta 10.000. La binaria conviene para búsquedas frecuentes, a costa de
+mantener el catálogo ordenado. Eso justifica pasar a un árbol binario de
+búsqueda, que mantiene el orden al insertar.
+
+## TP4 - Balance del árbol: BST vs AVL
+
+### Problema
 
 En un BST común, el orden de inserción determina la forma del árbol. Si los
 datos llegan ya ordenados, cada nodo nuevo va siempre al mismo lado y el
 árbol degenera en una lista enlazada: altura = N.
 
-# Resultados del experimento
+### Resultados del experimento
 
 Inserción de títulos ya ordenados alfabéticamente.
 
@@ -22,7 +43,7 @@ Inserción de títulos ya ordenados alfabéticamente.
 > mientras que el AVL se mantiene casi constante. Las alturas no varían
 > entre corridas.
 
-## Por qué importa el balance
+### Por qué importa el balance
 
 La búsqueda recorre, como máximo, tantos nodos como la altura del árbol. En
 el BST degenerado la altura es N, así que buscar cuesta O(n). En el AVL la
@@ -31,7 +52,7 @@ diferencia de alturas entre los subárboles supera 1, se rotan nodos para
 recuperar el equilibrio. Por eso la búsqueda en el AVL es O(log n) sin
 importar el orden de los datos.
 
-## Decisión de diseño
+### Decisión de diseño
 
 GameGuardian usa AVL porque el catálogo podría cargarse ya ordenado (por
 ejemplo, desde un archivo alfabético) y no queremos depender del orden de
