@@ -17,7 +17,7 @@
 ## Requerimientos no funcionales
 
 1 — La búsqueda por título debe resolverse en tiempo logarítmico sobre el total de elementos (O(log n)). (TP3: árbol binario de búsqueda; TP4: AVL, que garantiza O(log n) sin importar el orden de inserción)
-2 — El sistema debe soportar al menos 10.000 elementos sin degradar perceptiblemente el tiempo de respuesta (validado para la búsqueda en TP2 y TP4).
+2 — El sistema debe soportar al menos 10.000 elementos sin degradar perceptiblemente el tiempo de respuesta (TP2 y TP4).
 3 — La interfaz debe ser accesible por línea de comandos, sin requerir conocimientos técnicos del usuario final.
 4 — Los datos del catálogo deben poder cargarse desde un archivo JSON externo, sin necesidad de modificar el código fuente.
 
